@@ -1,11 +1,23 @@
 import { Component } from '@angular/core';
+import { Ingredient } from '../shared/ingredient.model';
 
 @Component({
-	selector: 'shopping-list-component',
+	selector: 'app-shopping-list',
 	templateUrl: './shopping-list.component.html',
-	styleUrls: [ './shopping-list.component.css ']
+	styleUrls: [ './shopping-list.component.css' ]
 })
 
-export class ShoppingList {
-	title: 'Shopping list';
+export class ShoppingListComponent {
+	ingredients: Ingredient[] = [
+		new Ingredient('Apples', 5),
+		new Ingredient('Tomatoes', 10)
+	];
+
+	constructor() {
+
+	}
+
+	ngOnInit() {
+
+	}
 }
