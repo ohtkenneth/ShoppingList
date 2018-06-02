@@ -20,4 +20,8 @@ export class ShoppingListComponent {
 	ngOnInit() {
 
 	}
+
+	onIngredientWasAdded(ingredientDetails: Ingredient) {
+		this.ingredients.push(ingredientDetails);
+	}
 }

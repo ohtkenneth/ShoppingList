@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
 	selector: 'app-header',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 	title = 'header';
+
+	@Output() onRoutePage = new EventEmitter<{ pageRoute: string }>();
+
+	routePage(page: string) {
+		this.onRoutePage.emit({ pageRoute: page });
+	}
 }
